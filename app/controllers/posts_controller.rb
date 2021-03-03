@@ -33,7 +33,7 @@ end
      if @post.update_attributes(post_params)
         redirect_to @post, success: 'Статья успешно обновлена' # Добавляем для flash вывод application.html.erb
      else
-        render :edit, denger: 'Статья не обновлена' 
+        render :edit, danger: 'Статья не обновлена' 
      end
         
     end

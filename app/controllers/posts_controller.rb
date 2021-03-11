@@ -29,7 +29,7 @@ end
     end
 
     def update
-     #@post = Post.find(params[:id])
+     
      if @post.update_attributes(post_params)
         redirect_to @post, success: 'Статья успешно обновлена' # Добавляем для flash вывод application.html.erb
      else
@@ -39,7 +39,7 @@ end
     end
 
     def destroy
-     #@post = Post.find(params[:id])
+     
      @post.destroy
      redirect_to posts_path, success: 'Статья удалена'  
     end

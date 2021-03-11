@@ -17,3 +17,7 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 //= require jquery3
 //= require bootstrap-sprockets
+//= require trix
+
+require("trix")
+require("@rails/actiontext")

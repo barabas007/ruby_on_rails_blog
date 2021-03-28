@@ -35,6 +35,7 @@ gem 'trix'
 gem 'trix-rails', require: 'trix'
 gem 'coffee-script', '~> 2.4', '>= 2.4.1'
 gem 'coffee-rails', '~> 5.0'
+gem 'will_paginate', '~> 3.1.0'
 
 
 group :development, :test do

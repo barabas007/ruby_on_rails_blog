@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     before_action :set_post, only: [:show, :edit, :update, :destroy] # Вызываем метод вместо @post = Post.find(params[:id])
 
    def index # вывод всех постов из БД
-    @posts = Post.all 
+    @posts = Post.paginate(page: params[:page], per_page: 3 ) 
    end
 
    def show # вывод одного поста с содержимым
@@ -54,7 +54,7 @@ end
    
 
    def post_params
-    params.require(:post).permit(:title, :summary, :body, :image)
+    params.require(:post).permit(:title, :summary, :body, :image, :all_tags)
     end
    
    
